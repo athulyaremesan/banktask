@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+</div>
+  <div class="card-body">
+    <h5 class="card-title"><b>Application Form</b></h5>
+   <center><p class="card-text">This Simple Banking Management System Project is accessible to all registered bank account holders. The account holders can register their account by filling in all the required fields on the registration form page. This banking system application requires the newly registered users to deposit money as the starting balance of their online account. Here, users can deposit a new amount to their account and withdraw from their current balance. The system also lists all the transaction records of the users that were done using the application. On the Transaction Records page, users can filter the records to show between two dates.</p></center>
+    <a href="{% url 'credentials:form' %}" class="btn btn-primary">Application Credentials</a>
+  </div>
+</div>
+    </center>
+
+
+{% endblock %}

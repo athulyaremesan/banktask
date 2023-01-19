@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <head>
+
+    <h1>LOGIN HERE</h1>
+    </head>
+    <body>
+    <form method="POST" action="login">
+		{% csrf_token %}
+	    <table>
+		<tr>
+			<td>
+				Username:
+			</td>
+
+			<td>
+				<input type="text"  placeholder="Enter Username " name="username">
+			</td>
+		</tr>
+<tr>
+<td>
+				Password:
+			</td>
+
+			<td>
+				<input type="Password" placeholder="Enter your Password" name="password">
+			</td>
+		</tr>
+
+        <tr>
+			<td>
+				submit:
+			</td>
+
+			<td>
+				<button class="btn btn-success" type="submit">Submit</button>
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+    </center>
+
+<p class="text-center">Don't have an account? <a href="{% url 'credentials:register' %}">Create an account</a>.</p>
+</form>
+
+
+</center>
+
+{% endblock %}

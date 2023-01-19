@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<head>
+
+<h1>Registration Form</h1>
+</head>
+<body>
+<form method="POST" action="register">
+    {% csrf_token %}
+	<table>
+		<tr>
+			<td>
+				Username:
+			</td>
+
+			<td>
+				<input type="text"  placeholder="Enter Username " name="username">
+			</td>
+		</tr>
+<tr>
+<td>
+				Password:
+			</td>
+
+			<td>
+				<input type="password" placeholder="Enter your Password" name="password">
+			</td>
+		</tr>
+        <tr>
+			<td>
+				Confirm password:
+			</td>
+
+			<td>
+				<input type="password"  placeholder="password confirmation " name="password1">
+			</td>
+		</tr>
+        <tr>
+			<td>
+				submit:
+			</td>
+
+			<td>
+				<button class="btn btn-success" type="submit">Submit</button>
+			</td>
+		</tr>
+	</table>
+</form>
+
+{% for msg in messages %}
+
+<h3>{{msg}}</h3>
+{% endfor %}
+</body>
+    </center>
+
+{% endblock %}
